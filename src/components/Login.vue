@@ -1,5 +1,6 @@
 <template>
     <div class="login_container">
+        <!-- 登录盒子  -->
         <div class="login_box">
             <!-- 头像 -->
             <div class="avatar_box">
