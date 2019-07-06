@@ -6,17 +6,17 @@
            <img src="../assets/logo.png" alt="">
          </div>
          <!-- 表单区域 -->
-        <el-form label-width="0px" class="login_form">
+        <el-form label-width="0px">
           <!-- 用户名 -->
           <el-form-item>
-              <el-input  prefix-icon="iconfont icon-user"></el-input>
+              <el-input ></el-input>
           </el-form-item>
           <!-- 密码 -->
           <el-form-item>
-              <el-input  prefix-icon="iconfont icon-3702mima"></el-input>
+              <el-input ></el-input>
           </el-form-item>
           <!-- 按钮区域 -->
-          <el-form-item class="btns">
+          <el-form-item>
               <el-button type="primary">登录</el-button>
               <el-button type="info">重置</el-button>
           </el-form-item>
