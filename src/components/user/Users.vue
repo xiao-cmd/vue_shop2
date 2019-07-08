@@ -19,25 +19,26 @@
           <el-button type="primary">添加用户</el-button>
         </el-col>
       </el-row>
+    </el-card>
 
         <el-table :data="userlist" border stripe>
-            <el-table-column type="index"></el-table-column>
-            <el-table-column label="姓名" prop="username"></el-table-column>
-            <el-table-column label="邮箱" prop="email"></el-table-column>
-            <el-table-column label="电话" prop="mobile"></el-table-column>
-            <el-table-column label="角色" prop="role_name"></el-table-column>
-            <el-table-column label="状态" prop="mg_state">
-                <template slot-scope="scope">   
-                    <!-- {{scope.row}} -->
-                    <el-switch v-model="scope.row.mg_state"></el-switch>
-                </template> 
-            </el-table-column>
-            <el-table-column label="操作"></el-table-column>
+          <el-table-column type="index"></el-table-column>
+          <el-table-column label="姓名" prop="username"></el-table-column>
+          <el-table-column label="邮箱" prop="email"></el-table-column>
+          <el-table-column label="电话" prop="mobile"></el-table-column>
+          <el-table-column label="角色" prop="role_name"></el-table-column>
+          <el-table-column label="状态" prop="mg_state">
+            <template slot-scope="scope">
+              <!-- {{scope.row}} -->
+              <el-switch v-model="scope.row.mg_state"></el-switch>
+            </template>
+          </el-table-column>
+          <el-table-column label="操作"></el-table-column>
         </el-table>
-
-    </el-card>
+     
   </div>
 </template>
+
 <script>
 export default {
   data() {
