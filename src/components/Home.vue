@@ -1,8 +1,8 @@
 <template>
-    <div>
-        this is home
-        <el-button type="info" @click="logout"> 退出 </el-button>
-    </div>
+  <div>
+    this is home
+    <el-button type="info" @click="logout">退出</el-button>
+  </div>
 </template>
 
 <script>
