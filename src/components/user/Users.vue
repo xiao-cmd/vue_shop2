@@ -121,7 +121,12 @@
     </el-dialog>
 
     <!-- 分配角色对话框 -->
-    <el-dialog title="分配角色" :visible.sync="setRoleDialogVisible" width="50%" @close="setRoleDialogClosed">
+    <el-dialog
+      title="分配角色"
+      :visible.sync="setRoleDialogVisible"
+      width="50%"
+      @close="setRoleDialogClosed"
+    >
       <!-- 弹窗主体 -->
       <p>用户名:{{userInfo.username}}</p>
       <p>当前角色:{{userInfo.role_name}}</p>
@@ -390,13 +395,16 @@ export default {
       // 让分配角色对话框显示出来
       this.setRoleDialogVisible = true
     },
-    async setRoleInfo(){
-      if(!this.selectedRoleId){
+    async setRoleInfo() {
+      if (!this.selectedRoleId) {
         return this.$message.error('请选择要分配的角色')
       }
-      const { data: res } = await this.$http.put(`users/${this.userInfo.id}/role`,{rid:this.selectedRoleId})
+      const { data: res } = await this.$http.put(
+        `users/${this.userInfo.id}/role`,
+        { rid: this.selectedRoleId }
+      )
       // console.log(res);
-     
+
       if (res.meta.status !== 200) {
         return this.$message.error('更新角色信息失败')
       }
@@ -405,8 +413,8 @@ export default {
       // 让分配角色对话框关闭
       this.setRoleDialogVisible = false
     },
-    setRoleDialogClosed(){
-      this.selectedRoleId=''
+    setRoleDialogClosed() {
+      this.selectedRoleId = ''
     }
   }
 }
